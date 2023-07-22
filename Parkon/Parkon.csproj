@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D03F2CDE-5677-4D82-BA2A-04D1B73001EF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Parkon</RootNamespace>
+    <AssemblyName>Parkon</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ID_DB">
+      <HintPath>..\..\..\..\..\00_LIBRARY\00_C# Library\01_Kutuphaneler\02_MyLibrary\ID_DataBase\bin\Debug\ID_DB.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MySql.Data">
+      <HintPath>..\..\..\..\..\..\00_LIBRARY\Library - ID MYSQL\v4.5.2\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="SX">
+      <HintPath>..\..\..\..\..\00_LIBRARY\00_C# Library\01_Kutuphaneler\02_MyLibrary\ID_DataBase\bin\Debug\SX.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.IO.Log" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CommClass\Bildirimler.cs" />
+    <Compile Include="CommClass\CLS.cs" />
+    <Compile Include="CommClass\Log.cs" />
+    <Compile Include="CommClass\PrgSettings.cs" />
+    <Compile Include="CommClass\TextCheck.cs" />
+    <Compile Include="CommClass\UserLogin.cs" />
+    <Compile Include="CreateClass\CreateAuthorized.cs" />
+    <Compile Include="CreateClass\CreateCustomer.cs" />
+    <Compile Include="CreateClass\CreateDepartment.cs" />
+    <Compile Include="CreateClass\CreateFolder.cs" />
+    <Compile Include="CreateClass\CreateProject.cs" />
+    <Compile Include="CommClass\Crypto.cs" />
+    <Compile Include="Form_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Main.Designer.cs">
+      <DependentUpon>Form_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Yeni_Revizyon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Yeni_Revizyon.Designer.cs">
+      <DependentUpon>Form_Yeni_Revizyon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Yeni_User.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Yeni_User.Designer.cs">
+      <DependentUpon>Form_Yeni_User.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Yeni_Proje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Yeni_Proje.Designer.cs">
+      <DependentUpon>Form_Yeni_Proje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Yeni_Yetkili.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Yeni_Yetkili.Designer.cs">
+      <DependentUpon>Form_Yeni_Yetkili.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Yeni_MusteriBolum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Yeni_MusteriBolum.Designer.cs">
+      <DependentUpon>Form_Yeni_MusteriBolum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Yeni_Musteri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Yeni_Musteri.Designer.cs">
+      <DependentUpon>Form_Yeni_Musteri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MySQL\ID_MySQL.cs" />
+    <Compile Include="MySQL\MySQL.cs" />
+    <Compile Include="MySQL\MySQLVar.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="CommClass\X_EskiKodlar.cs" />
+    <EmbeddedResource Include="Form_Main.resx">
+      <DependentUpon>Form_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Yeni_Revizyon.resx">
+      <DependentUpon>Form_Yeni_Revizyon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Yeni_User.resx">
+      <DependentUpon>Form_Yeni_User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Yeni_Proje.resx">
+      <DependentUpon>Form_Yeni_Proje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Yeni_Yetkili.resx">
+      <DependentUpon>Form_Yeni_Yetkili.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Yeni_MusteriBolum.resx">
+      <DependentUpon>Form_Yeni_MusteriBolum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Yeni_Musteri.resx">
+      <DependentUpon>Form_Yeni_Musteri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\003.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\033.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\041.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\042.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\043.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\045.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\222.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\229.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\App-password-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Apps-preferences-desktop-user-password-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\config-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\emikon_logo3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Floppy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
